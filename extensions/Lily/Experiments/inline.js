@@ -19,7 +19,7 @@
           {
             opcode: 'inlineTest',
             blockType: Scratch.BlockType.OUTPUT,
-            text: ['inline'],
+            text: ['inline block'],
             output: 'String',
             outputShape: 3,
             branchCount: 1
