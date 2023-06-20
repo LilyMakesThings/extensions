@@ -17,8 +17,7 @@
             text: ['inline'],
             output: 'String',
             outputShape: 3,
-            branchCount: 1,
-            isTerminal: true
+            branchCount: 1
           },
           {
             opcode: 'return',
