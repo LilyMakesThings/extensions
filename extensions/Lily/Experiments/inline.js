@@ -1,3 +1,8 @@
+/**
+ * These blocks are non-functional
+ * This is just a proof of concept
+ */
+
 (function (Scratch) {
   'use strict';
 
@@ -64,7 +69,10 @@
     }
 
     inlineTest(args, util) {
-      return args.INPUT;
+      return 'big chungus';
+    }
+
+    return(args, util) {
     }
 
     execute(args, util) {
