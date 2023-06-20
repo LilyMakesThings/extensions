@@ -1,3 +1,5 @@
+// To do: add CSS styles for slider
+
 (function (Scratch) {
   'use strict';
 
