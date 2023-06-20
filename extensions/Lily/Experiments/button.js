@@ -42,7 +42,7 @@
 
   class FieldButton extends ScratchBlocks.Field {
     constructor(opt_value) {
-      opt_value = '❤';
+      opt_value = '💖';
       super(opt_value);
       this.addArgType('button');
     }
