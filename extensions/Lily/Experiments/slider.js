@@ -13,7 +13,7 @@
         blocks: [
           {
             opcode: 'sliderBlock',
-            blockType: Scratch.BlockType.COMMAND,
+            blockType: Scratch.BlockType.REPORTER,
             text: 'slider input [SLIDER]',
             arguments: {
               SLIDER: {
