@@ -36,8 +36,7 @@
             text: 'execute [VALUE]',
             arguments: {
               VALUE: {
-                type: "squareInput",
-                defaultValue: 'foo'
+                type: "squareInput"
               }
             }
           }
@@ -55,7 +54,10 @@
           },
           squareInput: {
             output: 'String',
-            outputShape: 3
+            outputShape: 3,
+            implementation: {
+              fromJson: () => new FieldNullSquare()
+            }
           }
         }
       }
@@ -71,9 +73,21 @@
 
   class FieldStringBool extends ScratchBlocks.FieldTextInput {
     constructor(opt_value, opt_validator) {
-      opt_value = (opt_value && !isNaN(opt_value)) ? String(opt_value) : '0';
+      opt_value = (opt_value && !isNaN(opt_value)) ? String(opt_value) : 'o';
       super(opt_value, opt_validator);
       this.addArgType('stringBool');
+    }
+  }
+
+  class FieldNullSquare extends ScratchBlocks.Field {
+    constructor(opt_value, opt_validator) {
+      opt_value = '';
+      super(opt_value);
+      this.addArgType('squareInput');
+    }
+    
+    showEditor_() {
+      return;
     }
   }
 
