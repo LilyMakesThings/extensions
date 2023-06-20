@@ -1,8 +1,3 @@
-/**
- * These blocks are non-functional
- * This is just a proof of concept
- */
-
 (function (Scratch) {
   'use strict';
 
