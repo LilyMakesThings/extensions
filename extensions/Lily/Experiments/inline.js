@@ -30,7 +30,7 @@
             text: 'return [VALUE]',
             arguments: {
               VALUE: {
-                type: "stringBool"
+                type: "stringSquare"
               }
             },
             isTerminal: true
@@ -41,13 +41,13 @@
             text: 'execute [VALUE]',
             arguments: {
               VALUE: {
-                type: "squareInput"
+                type: "nullSquare"
               }
             }
           }
         ],
         customFieldTypes: {
-          stringBool: {
+          stringSquare: {
             output: 'String',
             outputShape: 3,
             color1: '#FFFFFF',
@@ -57,7 +57,7 @@
               fromJson: () => new FieldStringBool()
             }
           },
-          squareInput: {
+          nullSquare: {
             output: 'String',
             outputShape: 3,
             implementation: {
@@ -69,7 +69,7 @@
     }
 
     inlineTest(args, util) {
-      return 'big chungus';
+      return util.startBranch(1, false);
     }
 
     return(args, util) {
@@ -81,9 +81,9 @@
 
   class FieldStringBool extends ScratchBlocks.FieldTextInput {
     constructor(opt_value, opt_validator) {
-      opt_value = (opt_value && !isNaN(opt_value)) ? String(opt_value) : 'o';
+      opt_value = (opt_value && !isNaN(opt_value)) ? String(opt_value) : 'hello';
       super(opt_value, opt_validator);
-      this.addArgType('stringBool');
+      this.addArgType('stringSquare');
     }
   }
 
@@ -91,7 +91,7 @@
     constructor(opt_value, opt_validator) {
       opt_value = '';
       super(opt_value);
-      this.addArgType('squareInput');
+      this.addArgType('nullSquare');
     }
     
     showEditor_() {
@@ -103,6 +103,8 @@
     ScratchBlocks.Field.register(fieldInfo.name, fieldInfo.implementation);
   });
 
+  // from: https://github.com/Xeltalliv/extensions/blob/examples/examples/custom-field-types.js
+  // Scratch doesn't automatically set input colors
   const bcfi = runtime._buildCustomFieldInfo.bind(runtime);
   const bcftfsb = runtime._buildCustomFieldTypeForScratchBlocks.bind(runtime);
   let fi = null;
@@ -121,6 +123,7 @@
     return res;
   }
 
+  // Reimplementing the "output" and "outputShape" block parameters
   const cbfsb = runtime._convertBlockForScratchBlocks.bind(runtime);
   runtime._convertBlockForScratchBlocks = function(blockInfo, categoryInfo) {
     const res = cbfsb(blockInfo, categoryInfo);
