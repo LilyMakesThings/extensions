@@ -53,7 +53,6 @@
       this.__proto__.__proto__.showEditor_.call(this, this.useTouchInteraction_);
       ScratchBlocks.DropDownDiv.hideWithoutAnimation();
       ScratchBlocks.DropDownDiv.clearContent();
-      
       var div = ScratchBlocks.DropDownDiv.getContentDiv();
       var sliderInput = document.createElement('input');
       const initialValue = ScratchBlocks.FieldTextInput.htmlInput_.value;
