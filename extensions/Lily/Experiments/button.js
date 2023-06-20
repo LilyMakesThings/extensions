@@ -81,18 +81,5 @@
     return res;
   }
 
-  // Reimplementing the "output" and "outputShape" block parameters
-  const cbfsb = runtime._convertBlockForScratchBlocks.bind(runtime);
-  runtime._convertBlockForScratchBlocks = function(blockInfo, categoryInfo) {
-    const res = cbfsb(blockInfo, categoryInfo);
-    if (blockInfo.outputShape) {
-      if (!res.json.outputShape) res.json.outputShape = blockInfo.outputShape;
-    }
-    if (blockInfo.output) {
-      if (!res.json.output) res.json.output = blockInfo.output;
-    }
-    return res;
-  }
-
   Scratch.extensions.register(new button());
 })(Scratch);
