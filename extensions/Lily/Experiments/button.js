@@ -1,3 +1,5 @@
+// Todo: find way to re-color text to #cccccc
+
 (function (Scratch) {
   'use strict';
 
@@ -16,10 +18,13 @@
           {
             opcode: 'buttonBlock',
             blockType: Scratch.BlockType.COMMAND,
-            text: 'button [BUTTON]',
+            text: 'button [BUTTON] element [RANDOM]',
             arguments: {
               BUTTON: {
                 type: "button"
+              },
+              RANDOM: {
+                type: Scratch.ArgumentType.STRING
               }
             }
           }
@@ -27,6 +32,7 @@
         customFieldTypes: {
           button: {
             output: 'String',
+            color1: '#141414',
             outputShape: 3,
             implementation: {
               fromJson: () => new FieldButton()
@@ -42,13 +48,13 @@
 
   class FieldButton extends ScratchBlocks.Field {
     constructor(opt_value) {
-      opt_value = '💖';
+      opt_value = 'Button';
       super(opt_value);
       this.addArgType('button');
     }
 
     showEditor_() {
-      alert('I love you :) ❤');
+      alert('💖💖 I love you :) 💖💖');
     }
   }
 
