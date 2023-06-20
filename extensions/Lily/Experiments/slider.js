@@ -42,10 +42,10 @@
     }
   }
 
-  class FieldSlider extends ScratchBlocks.FieldTextInput {
-    constructor(opt_value, opt_validator) {
-      opt_value = (opt_value && !isNaN(opt_value)) ? String(opt_value) : '0';
-      super(opt_value, opt_validator);
+  class FieldSlider extends ScratchBlocks.FieldNumber {
+    constructor(opt_value) {
+      opt_value = 0;
+      super(opt_value);
       this.addArgType('slider');
     }
 
