@@ -13,7 +13,7 @@
         blocks: [
           {
             opcode: 'sliderBlock',
-            blockType: Scratch.BlockType.REPORTER,
+            blockType: Scratch.BlockType.COMMAND,
             text: 'slider input [SLIDER]',
             arguments: {
               SLIDER: {
@@ -38,7 +38,7 @@
     }
 
     sliderBlock(args) {
-      return args.SLIDER;
+      return args.SLIDER + '\n\n ...WAIT WHY DOES THIS RETURN';
     }
   }
 
