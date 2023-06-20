@@ -35,6 +35,7 @@
             },
             isTerminal: true
           },
+          '---',
           {
             opcode: 'execute',
             blockType: Scratch.BlockType.COMMAND,
