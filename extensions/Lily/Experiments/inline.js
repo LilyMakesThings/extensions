@@ -1,6 +1,9 @@
 (function (Scratch) {
   'use strict';
 
+  const vm = Scratch.vm;
+  const runtime = vm.runtime;
+
   class inline {
     getInfo() {
       return {
@@ -79,8 +82,6 @@
     ScratchBlocks.Field.register(fieldInfo.name, fieldInfo.implementation);
   });
 
-  const vm = Scratch.vm;
-  const runtime = vm.runtime;
   const bcfi = runtime._buildCustomFieldInfo.bind(runtime);
   const bcftfsb = runtime._buildCustomFieldTypeForScratchBlocks.bind(runtime);
   let fi = null;
