@@ -58,6 +58,7 @@
       var div = ScratchBlocks.DropDownDiv.getContentDiv();
       var sliderInput = document.createElement('input');
       const initialValue = ScratchBlocks.FieldTextInput.htmlInput_.value;
+      // reference: https://github.com/google/blockly-samples/tree/master/plugins/field-slider
       sliderInput.setAttribute('type', 'range');
       sliderInput.setAttribute('min', 0); // minimum output value
       sliderInput.setAttribute('max', 100); // maximum output value
