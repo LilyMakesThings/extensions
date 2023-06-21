@@ -35,25 +35,6 @@
             },
             isTerminal: true
           }
-        ],
-        customFieldTypes: {
-          stringSquare: {
-            output: 'String',
-            outputShape: 3,
-            color1: '#FFFFFF',
-            color2: '#FFFFFF',
-            color3: '#FFFFFF',
-            implementation: {
-              fromJson: () => new FieldStringBool()
-            }
-          },
-          nullSquare: {
-            output: 'String',
-            outputShape: 3,
-            implementation: {
-              fromJson: () => new FieldNullSquare()
-            }
-          }
         }
       }
     }
