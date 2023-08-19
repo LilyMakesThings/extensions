@@ -1,5 +1,3 @@
-// To do: Make this work
-
 (function (Scratch) {
   'use strict';
 
@@ -37,17 +35,25 @@
       }
     }
 
-    checkbox() {
+    dropdown() {
     }
   }
 
+  // This is a terrible way to do this, please don't actually use this in an extension
   class FieldDropdown extends ScratchBlocks.FieldTextDropdown {
     constructor(text, menuGenerator, opt_validator, opt_restrictor) {
       ScratchBlocks.FieldTextDropdown.prototype.getOptions = ScratchBlocks.FieldDropdown.prototype.getOptions;
       text = 'goobert';
-      menuGenerator = [["goobert", "goobert"], ["frick", "frick"]];
       super(text, menuGenerator, opt_validator, opt_restrictor);
       this.addArgType('dropdownArg');
+    }
+
+    getOptions() {
+      return [['goobert', 'goobert'], ['frick', 'frick']];
+    }
+
+    onItemSelected(_, menuItem) {
+      this.setValue(menuItem.getValue())
     }
   }
 
