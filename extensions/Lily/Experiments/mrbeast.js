@@ -1,50 +1,48 @@
-// To do: add CSS styles for slider
-
 (function (Scratch) {
   'use strict';
 
   const vm = Scratch.vm;
   const runtime = vm.runtime;
 
-  class slider {
+  class MrBeast {
     getInfo() {
       return {
-        id: 'lmsSlider',
+        id: 'lmsMrBeast',
         color1: '#565656',
-        name: 'Slider Test',
+        name: 'MrBeast',
         blocks: [
           {
-            opcode: 'sliderBlock',
+            opcode: 'mrBeast',
             blockType: Scratch.BlockType.COMMAND,
-            text: 'slider input [SLIDER]',
+            text: 'mr beast jumpscare: [UHOH]',
             arguments: {
-              SLIDER: {
-                type: "slider"
+              UHOH: {
+                type: "beast"
               }
             }
           }
         ],
         customFieldTypes: {
-          slider: {
+          beast: {
             output: 'String',
             color1: '#FFFFFF',
             color2: '#FFFFFF',
             color3: '#FFFFFF',
             outputShape: 2,
             implementation: {
-              fromJson: () => new FieldSlider()
+              fromJson: () => new BeastInput()
             }
           }
         }
       }
     }
 
-    sliderBlock(args) {
-      return args.SLIDER + '\n\n ...WAIT WHY DOES THIS RETURN';
+    mrBeast(args) {
+      return args.UHOH + '\n\n ...WAIT WHY DOES THIS RETURN';
     }
   }
 
-  class FieldSlider extends ScratchBlocks.FieldNumber {
+  class BeastInput extends ScratchBlocks.FieldNumber {
     constructor(opt_value) {
       opt_value = 0;
       super(opt_value);
@@ -56,20 +54,14 @@
       ScratchBlocks.DropDownDiv.hideWithoutAnimation();
       ScratchBlocks.DropDownDiv.clearContent();
       var div = ScratchBlocks.DropDownDiv.getContentDiv();
-      var sliderInput = document.createElement('input');
+      var mrBeast = document.createElement('video');
       const initialValue = ScratchBlocks.FieldTextInput.htmlInput_.value;
       // reference: https://github.com/google/blockly-samples/tree/master/plugins/field-slider
-      sliderInput.setAttribute('type', 'range');
-      sliderInput.setAttribute('min', 0); // minimum output value
-      sliderInput.setAttribute('max', 100); // maximum output value
-      sliderInput.setAttribute('step', 1); // how many steps when you drag it
-      sliderInput.setAttribute('value', initialValue); // initial value
-      sliderInput.setAttribute('tabindex', '0');
-      sliderInput.className = 'fieldSlider';
-      sliderInput.oninput = function() {
-        ScratchBlocks.FieldTextInput.htmlInput_.value = this.value;
-      };
-      div.append(sliderInput);
+      mrBeast.src = 'https://penguinmod.site/mrbeast.mp4';
+      mrBeast.style.width = '320px';
+      mrBeast.style.height = '180px';
+      mrBeast.play();
+      div.append(mrBeast);
       ScratchBlocks.DropDownDiv.setColour(this.sourceBlock_.parentBlock_.getColour(), this.sourceBlock_.getColourTertiary());
       ScratchBlocks.DropDownDiv.setCategory(this.sourceBlock_.parentBlock_.getCategory());
       ScratchBlocks.DropDownDiv.showPositionedByBlock(this, this.sourceBlock_);
@@ -100,5 +92,5 @@
     return res;
   }
 
-  Scratch.extensions.register(new slider());
+  Scratch.extensions.register(new MrBeast());
 })(Scratch);
