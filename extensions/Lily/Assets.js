@@ -22,7 +22,7 @@
           {
             opcode: "addSprite",
             blockType: Scratch.BlockType.COMMAND,
-            text: "add sprite from URL [URL]",
+            text: Scratch.translate("add sprite from URL [URL]"),
             arguments: {
               URL: {
                 type: Scratch.ArgumentType.STRING,
@@ -32,7 +32,7 @@
           {
             opcode: "addCostume",
             blockType: Scratch.BlockType.COMMAND,
-            text: "add costume from URL [URL] named [NAME]",
+            text: Scratch.translate("add costume from URL [URL] named [NAME]"),
             arguments: {
               URL: {
                 type: Scratch.ArgumentType.STRING,
@@ -46,7 +46,7 @@
           {
             opcode: "addSound",
             blockType: Scratch.BlockType.COMMAND,
-            text: "add sound from URL [URL] named [NAME]",
+            text: Scratch.translate("add sound from URL [URL] named [NAME]"),
             arguments: {
               URL: {
                 type: Scratch.ArgumentType.STRING,
@@ -61,7 +61,7 @@
           {
             opcode: "renameSprite",
             blockType: Scratch.BlockType.COMMAND,
-            text: "rename sprite [TARGET] to [NAME]",
+            text: Scratch.translate("rename sprite [TARGET] to [NAME]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -76,7 +76,7 @@
           {
             opcode: "renameCostume",
             blockType: Scratch.BlockType.COMMAND,
-            text: "rename costume [COSTUME] to [NAME]",
+            text: Scratch.translate("rename costume [COSTUME] to [NAME]"),
             arguments: {
               COSTUME: {
                 type: Scratch.ArgumentType.COSTUME,
@@ -90,7 +90,7 @@
           {
             opcode: "renameSound",
             blockType: Scratch.BlockType.COMMAND,
-            text: "rename sound [SOUND] to [NAME]",
+            text: Scratch.translate("rename sound [SOUND] to [NAME]"),
             arguments: {
               SOUND: {
                 type: Scratch.ArgumentType.SOUND,
@@ -105,7 +105,7 @@
           {
             opcode: "deleteSprite",
             blockType: Scratch.BlockType.COMMAND,
-            text: "delete sprite [TARGET]",
+            text: Scratch.translate("delete sprite [TARGET]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -120,7 +120,7 @@
           {
             opcode: "deleteCostume",
             blockType: Scratch.BlockType.COMMAND,
-            text: "delete costume [COSTUME]",
+            text: Scratch.translate("delete costume [COSTUME]"),
             arguments: {
               COSTUME: {
                 type: Scratch.ArgumentType.COSTUME,
@@ -134,7 +134,7 @@
           {
             opcode: "deleteSound",
             blockType: Scratch.BlockType.COMMAND,
-            text: "delete sound [SOUND]",
+            text: Scratch.translate("delete sound [SOUND]"),
             arguments: {
               SOUND: {
                 type: Scratch.ArgumentType.SOUND,
@@ -149,28 +149,28 @@
           {
             opcode: "getAllSprites",
             blockType: Scratch.BlockType.REPORTER,
-            text: "all sprites",
+            text: Scratch.translate("all sprites"),
           },
           {
             opcode: "getAllCostumes",
             blockType: Scratch.BlockType.REPORTER,
-            text: "all costumes",
+            text: Scratch.translate("all costumes"),
           },
           {
             opcode: "getAllSounds",
             blockType: Scratch.BlockType.REPORTER,
-            text: "all sounds",
+            text: Scratch.translate("all sounds"),
           },
           {
             opcode: "getSpriteName",
             blockType: Scratch.BlockType.REPORTER,
-            text: "sprite name",
+            text: Scratch.translate("sprite name"),
           },
           "---",
           {
             opcode: "reorderCostume",
             blockType: Scratch.BlockType.COMMAND,
-            text: "reorder costume # [INDEX1] to index [INDEX2]",
+            text: Scratch.translate("reorder costume # [INDEX1] to index [INDEX2]"),
             arguments: {
               INDEX1: {
                 type: Scratch.ArgumentType.NUMBER,
@@ -185,7 +185,7 @@
           {
             opcode: "reorderSound",
             blockType: Scratch.BlockType.COMMAND,
-            text: "reorder sound # [INDEX1] to index [INDEX2]",
+            text: Scratch.translate("reorder sound # [INDEX1] to index [INDEX2]"),
             arguments: {
               INDEX1: {
                 type: Scratch.ArgumentType.NUMBER,
@@ -201,7 +201,7 @@
           {
             opcode: "getSoundData",
             blockType: Scratch.BlockType.REPORTER,
-            text: "[ATTRIBUTE] of [SOUND]",
+            text: Scratch.translate("[ATTRIBUTE] of [SOUND]"),
             arguments: {
               ATTRIBUTE: {
                 type: Scratch.ArgumentType.STRING,
@@ -215,7 +215,7 @@
           {
             opcode: "getCostumeData",
             blockType: Scratch.BlockType.REPORTER,
-            text: "[ATTRIBUTE] of [COSTUME]",
+            text: Scratch.translate("[ATTRIBUTE] of [COSTUME]"),
             arguments: {
               ATTRIBUTE: {
                 type: Scratch.ArgumentType.STRING,
@@ -230,7 +230,7 @@
           {
             opcode: "getCostumeAtIndex",
             blockType: Scratch.BlockType.REPORTER,
-            text: "name of costume # [INDEX]",
+            text: Scratch.translate("name of costume # [INDEX]"),
             arguments: {
               INDEX: {
                 type: Scratch.ArgumentType.NUMBER,
@@ -241,7 +241,7 @@
           {
             opcode: "getSoundAtIndex",
             blockType: Scratch.BlockType.REPORTER,
-            text: "name of sound # [INDEX]",
+            text: Scratch.translate("name of sound # [INDEX]"),
             arguments: {
               INDEX: {
                 type: Scratch.ArgumentType.NUMBER,
@@ -253,7 +253,7 @@
           {
             opcode: "openProject",
             blockType: Scratch.BlockType.COMMAND,
-            text: "open project from URL [URL]",
+            text: Scratch.translate("open project from URL [URL]"),
             arguments: {
               URL: {
                 type: Scratch.ArgumentType.STRING,
@@ -263,13 +263,13 @@
           {
             opcode: "getProjectJSON",
             blockType: Scratch.BlockType.REPORTER,
-            text: "project JSON",
+            text: Scratch.translate("project JSON"),
           },
           "---",
           {
             opcode: "loadExtension",
             blockType: Scratch.BlockType.COMMAND,
-            text: "load extension from URL [URL]",
+            text: Scratch.translate("load extension from URL [URL]"),
             arguments: {
               URL: {
                 type: Scratch.ArgumentType.STRING,
@@ -281,7 +281,7 @@
           {
             opcode: "getLoadedExtensions",
             blockType: Scratch.BlockType.REPORTER,
-            text: "loaded extensions",
+            text: Scratch.translate("loaded extensions"),
           },
         ],
         menus: {
