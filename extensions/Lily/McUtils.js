@@ -22,7 +22,7 @@
           {
             opcode: "managerReporter",
             blockType: Scratch.BlockType.REPORTER,
-            text: "if [INPUTA] is manager then [INPUTB] else [INPUTC]",
+            text: Scratch.Translate("if [INPUTA] is manager then [INPUTB] else [INPUTC]"),
             arguments: {
               INPUTA: {
                 type: Scratch.ArgumentType.BOOLEAN,
@@ -38,7 +38,7 @@
           {
             opcode: "icecreammachine",
             blockType: Scratch.BlockType.BOOLEAN,
-            text: "is ice cream machine [INPUT]",
+            text: Scratch.Translate("is ice cream machine [INPUT]"),
             arguments: {
               INPUT: {
                 type: Scratch.ArgumentType.STRING,
@@ -49,7 +49,7 @@
           {
             opcode: "talkToManager",
             blockType: Scratch.BlockType.BOOLEAN,
-            text: "talk to manager [INPUT]",
+            text: Scratch.Translate("talk to manager [INPUT]"),
             arguments: {
               INPUT: {
                 type: Scratch.ArgumentType.STRING,
@@ -59,7 +59,7 @@
           {
             opcode: "placeOrder",
             blockType: Scratch.BlockType.REPORTER,
-            text: "place order [INPUT]",
+            text: Scratch.Translate("place order [INPUT]"),
             arguments: {
               INPUT: {
                 type: Scratch.ArgumentType.STRING,
