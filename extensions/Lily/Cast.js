@@ -17,7 +17,7 @@
           {
             opcode: "toType",
             blockType: Scratch.BlockType.REPORTER,
-            text: "cast [INPUT] to [TYPE]",
+            text: Scratch.translate("cast [INPUT] to [TYPE]"),
             allowDropAnywhere: true,
             disableMonitor: true,
             arguments: {
@@ -34,7 +34,7 @@
           {
             opcode: "typeOf",
             blockType: Scratch.BlockType.REPORTER,
-            text: "type of [INPUT]",
+            text: Scratch.translate("type of [INPUT]"),
             disableMonitor: true,
             arguments: {
               INPUT: {
