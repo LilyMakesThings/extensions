@@ -64,7 +64,7 @@
           {
             opcode: "registerSVGSkin",
             blockType: Scratch.BlockType.COMMAND,
-            text: "create SVG skin [SVG] as [NAME]",
+            text: Scratch.Translate("create SVG skin [SVG] as [NAME]"),
             arguments: {
               SVG: {
                 type: Scratch.ArgumentType.STRING,
@@ -82,7 +82,7 @@
           {
             opcode: "registerCostumeSkin",
             blockType: Scratch.BlockType.COMMAND,
-            text: "load skin from [COSTUME] as [NAME]",
+            text: Scratch.Translate("load skin from [COSTUME] as [NAME]"),
             arguments: {
               COSTUME: {
                 type: Scratch.ArgumentType.COSTUME,
@@ -96,7 +96,7 @@
           {
             opcode: "registerURLSkin",
             blockType: Scratch.BlockType.COMMAND,
-            text: "load skin from URL [URL] as [NAME]",
+            text: Scratch.Translate("load skin from URL [URL] as [NAME]"),
             arguments: {
               URL: {
                 type: Scratch.ArgumentType.STRING,
@@ -111,7 +111,7 @@
           {
             opcode: "getSkinLoaded",
             blockType: Scratch.BlockType.BOOLEAN,
-            text: "skin [NAME] is loaded?",
+            text: Scratch.Translate("skin [NAME] is loaded?"),
             arguments: {
               NAME: {
                 type: Scratch.ArgumentType.STRING,
@@ -125,7 +125,7 @@
           {
             opcode: "setSkin",
             blockType: Scratch.BlockType.COMMAND,
-            text: "set skin of [TARGET] to [NAME]",
+            text: Scratch.Translate("set skin of [TARGET] to [NAME]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -140,7 +140,7 @@
           {
             opcode: "restoreSkin",
             blockType: Scratch.BlockType.COMMAND,
-            text: "restore skin of [TARGET]",
+            text: Scratch.Translate("restore skin of [TARGET]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -151,7 +151,7 @@
           {
             opcode: "restoreTargets",
             blockType: Scratch.BlockType.COMMAND,
-            text: "restore targets with skin [NAME]",
+            text: Scratch.Translate("restore targets with skin [NAME]"),
             arguments: {
               NAME: {
                 type: Scratch.ArgumentType.STRING,
@@ -165,7 +165,7 @@
           {
             opcode: "getCurrentSkin",
             blockType: Scratch.BlockType.REPORTER,
-            text: "current skin of [TARGET]",
+            text: Scratch.Translate("current skin of [TARGET]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -176,7 +176,7 @@
           {
             opcode: "getSkinAttribute",
             blockType: Scratch.BlockType.REPORTER,
-            text: "[ATTRIBUTE] of skin [NAME]",
+            text: Scratch.Translate("[ATTRIBUTE] of skin [NAME]"),
             arguments: {
               ATTRIBUTE: {
                 type: Scratch.ArgumentType.STRING,
@@ -194,7 +194,7 @@
           {
             opcode: "deleteSkin",
             blockType: Scratch.BlockType.COMMAND,
-            text: "delete skin [NAME]",
+            text: Scratch.Translate("delete skin [NAME]"),
             arguments: {
               NAME: {
                 type: Scratch.ArgumentType.STRING,
@@ -205,7 +205,7 @@
           {
             opcode: "deleteAllSkins",
             blockType: Scratch.BlockType.COMMAND,
-            text: "delete all skins",
+            text: Scratch.Translate("delete all skins"),
           },
         ],
         menus: {
