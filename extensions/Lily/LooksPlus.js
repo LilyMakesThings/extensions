@@ -45,7 +45,7 @@
           {
             opcode: "showSprite",
             blockType: Scratch.BlockType.COMMAND,
-            text: "show [TARGET]",
+            text: Scratch.Translate("show [TARGET]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -56,7 +56,7 @@
           {
             opcode: "hideSprite",
             blockType: Scratch.BlockType.COMMAND,
-            text: "hide [TARGET]",
+            text: Scratch.Translate("hide [TARGET]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -67,7 +67,7 @@
           {
             opcode: "spriteVisible",
             blockType: Scratch.BlockType.BOOLEAN,
-            text: "[TARGET] visible?",
+            text: Scratch.Translate("[TARGET] visible?"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -81,7 +81,7 @@
           {
             opcode: "setLayerTo",
             blockType: Scratch.BlockType.COMMAND,
-            text: "set layer # of [TARGET] to [LAYER]",
+            text: Scratch.Translate("set layer # of [TARGET] to [LAYER]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -96,7 +96,7 @@
           {
             opcode: "spriteLayerNumber",
             blockType: Scratch.BlockType.REPORTER,
-            text: "layer # of [TARGET]",
+            text: Scratch.Translate("layer # of [TARGET]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -107,7 +107,7 @@
           {
             opcode: "effectValue",
             blockType: Scratch.BlockType.REPORTER,
-            text: "[EFFECT] effect of [TARGET]",
+            text: Scratch.Translate("[EFFECT] effect of [TARGET]"),
             arguments: {
               EFFECT: {
                 type: Scratch.ArgumentType.STRING,
@@ -126,7 +126,7 @@
           {
             opcode: "targetCostumeNumber",
             blockType: Scratch.BlockType.REPORTER,
-            text: "# of costumes in [TARGET]",
+            text: Scratch.Translate("# of costumes in [TARGET]"),
             arguments: {
               TARGET: {
                 type: Scratch.ArgumentType.STRING,
@@ -137,7 +137,7 @@
           {
             opcode: "costumeAttribute",
             blockType: Scratch.BlockType.REPORTER,
-            text: "[ATTRIBUTE] of [COSTUME]",
+            text: Scratch.Translate("[ATTRIBUTE] of [COSTUME]"),
             arguments: {
               ATTRIBUTE: {
                 type: Scratch.ArgumentType.STRING,
@@ -154,7 +154,7 @@
           {
             opcode: "snapshotStage",
             blockType: Scratch.BlockType.REPORTER,
-            text: "snapshot stage",
+            text: Scratch.Translate("snapshot stage"),
             disableMonitor: true,
           },
 
@@ -163,7 +163,7 @@
           {
             opcode: "replaceCostumeContent",
             blockType: Scratch.BlockType.COMMAND,
-            text: "set [TYPE] for [COSTUME] to [CONTENT]",
+            text: Scratch.Translate("set [TYPE] for [COSTUME] to [CONTENT]"),
             arguments: {
               TYPE: {
                 type: Scratch.ArgumentType.STRING,
@@ -182,7 +182,7 @@
           {
             opcode: "restoreCostumeContent",
             blockType: Scratch.BlockType.COMMAND,
-            text: "restore content for [COSTUME]",
+            text: Scratch.Translate("restore content for [COSTUME]"),
             arguments: {
               COSTUME: {
                 type: Scratch.ArgumentType.COSTUME,
@@ -192,7 +192,7 @@
           {
             opcode: "costumeContent",
             blockType: Scratch.BlockType.REPORTER,
-            text: "[CONTENT] of costume # [COSTUME] of [TARGET]",
+            text: Scratch.Translate("[CONTENT] of costume # [COSTUME] of [TARGET]"),
             arguments: {
               CONTENT: {
                 type: Scratch.ArgumentType.STRING,
@@ -215,7 +215,7 @@
           {
             opcode: "replaceColors",
             blockType: Scratch.BlockType.REPORTER,
-            text: "replace [COLOR1] with [COLOR2] in [SVG]",
+            text: Scratch.Translate("replace [COLOR1] with [COLOR2] in [SVG]"),
             arguments: {
               COLOR1: {
                 type: Scratch.ArgumentType.COLOR,
@@ -234,7 +234,7 @@
           {
             opcode: "colorHex",
             blockType: Scratch.BlockType.REPORTER,
-            text: "hex of [COLOR]",
+            text: Scratch.Translate("hex of [COLOR]"),
             arguments: {
               COLOR: {
                 type: Scratch.ArgumentType.COLOR,
