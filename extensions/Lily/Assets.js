@@ -1,8 +1,7 @@
 // Name: Asset Manager
 // ID: lmsAssets
 // Description: Add, remove, and get data from various types of assets.
-
-// TheShovel is so epic and cool and awesome
+// By: LilyMakesThings <https://scratch.mit.edu/users/LilyMakesThings/>
 
 (function (Scratch) {
   "use strict";
@@ -311,7 +310,6 @@
       }
     }
 
-    // Thank you PenguinMod for providing this code.
     async addCostume(args, util) {
       const targetId = util.target.id;
       const assetName = Cast.toString(args.NAME);
@@ -390,7 +388,6 @@
         console.error(e);
       }
     }
-    // End of PenguinMod
 
     renameSprite(args, util) {
       const target = this._getTargetFromMenu(args.TARGET, util);
