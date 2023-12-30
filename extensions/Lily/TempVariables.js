@@ -10,7 +10,7 @@
     getInfo() {
       return {
         id: "lmstempvars",
-        name: "Temporary Variables",
+        name: "Temporary Variables (Deprecated)",
         color1: "#FF791A",
         color2: "#E15D00",
         menuIconURI: menuIconURI,
