@@ -10,7 +10,7 @@
     getInfo() {
       return {
         id: "lmscomments",
-        name: "Comment Blocks",
+        name: Scratch.translate("Comment Blocks"),
         color1: "#e4db8c",
         color2: "#c6be79",
         color3: "#a8a167",
