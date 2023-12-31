@@ -36,7 +36,7 @@
     getInfo() {
       return {
         id: "lmsLooksPlus",
-        name: "Looks+",
+        name: Scratch.translate("Looks+"),
         color1: "#9966FF",
         color2: "#855CD6",
         color3: "#774DCB",
