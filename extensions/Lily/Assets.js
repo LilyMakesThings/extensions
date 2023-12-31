@@ -17,7 +17,7 @@
         color1: "#5779ca",
         color2: "#4e6db6",
         color3: "#4661a2",
-        name: "Asset Manager",
+        name: Scratch.translate("Asset Manager"),
         blocks: [
           {
             opcode: "addSprite",
