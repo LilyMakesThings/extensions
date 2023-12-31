@@ -209,7 +209,7 @@
     getInfo() {
       return {
         id: "lmsMoreEvents",
-        name: "More Events",
+        name: Scratch.translate("More Events"),
         color1: "#FFBF00",
         color2: "#E6AC00",
         color3: "#CC9900",
@@ -217,7 +217,7 @@
           {
             opcode: "whenStopClicked",
             blockType: Scratch.BlockType.EVENT,
-            text: Scratch.Translate("when [STOP] clicked"),
+            text: Scratch.translate("when [STOP] clicked"),
             isEdgeActivated: false,
             arguments: {
               STOP: {
@@ -229,7 +229,7 @@
           {
             opcode: "forever",
             blockType: Scratch.BlockType.EVENT,
-            text: Scratch.Translate("forever"),
+            text: Scratch.translate("forever"),
             isEdgeActivated: false,
           },
 
@@ -238,7 +238,7 @@
           {
             opcode: "whenTrueFalse",
             blockType: Scratch.BlockType.HAT,
-            text: Scratch.Translate("when [CONDITION] becomes [STATE]"),
+            text: Scratch.translate("when [CONDITION] becomes [STATE]"),
             isEdgeActivated: true,
             arguments: {
               CONDITION: {
@@ -253,7 +253,7 @@
           {
             opcode: "whileTrueFalse",
             blockType: Scratch.BlockType.HAT,
-            text: Scratch.Translate("while [CONDITION] is [STATE]"),
+            text: Scratch.translate("while [CONDITION] is [STATE]"),
             isEdgeActivated: false,
             arguments: {
               CONDITION: {
@@ -271,7 +271,7 @@
           {
             opcode: "whenValueChanged",
             blockType: Scratch.BlockType.HAT,
-            text: Scratch.Translate("when [INPUT] is changed"),
+            text: Scratch.translate("when [INPUT] is changed"),
             isEdgeActivated: false,
             arguments: {
               INPUT: {
@@ -285,7 +285,7 @@
           {
             opcode: "everyDuration",
             blockType: Scratch.BlockType.HAT,
-            text: Scratch.Translate("every [DURATION] frames"),
+            text: Scratch.translate("every [DURATION] frames"),
             isEdgeActivated: false,
             arguments: {
               DURATION: {
@@ -300,7 +300,7 @@
           {
             opcode: "whenKeyAction",
             blockType: Scratch.BlockType.HAT,
-            text: Scratch.Translate("when [KEY_OPTION] key [ACTION]"),
+            text: Scratch.translate("when [KEY_OPTION] key [ACTION]"),
             isEdgeActivated: true,
             arguments: {
               KEY_OPTION: {
@@ -317,7 +317,7 @@
           {
             opcode: "whileKeyPressed",
             blockType: Scratch.BlockType.HAT,
-            text: Scratch.Translate("while [KEY_OPTION] key pressed"),
+            text: Scratch.translate("while [KEY_OPTION] key pressed"),
             isEdgeActivated: false,
             arguments: {
               KEY_OPTION: {
@@ -333,7 +333,7 @@
           {
             opcode: "broadcastToTarget",
             blockType: Scratch.BlockType.COMMAND,
-            text: Scratch.Translate("broadcast [BROADCAST_OPTION] to [TARGET]"),
+            text: Scratch.translate("broadcast [BROADCAST_OPTION] to [TARGET]"),
             arguments: {
               BROADCAST_OPTION: {
                 type: null,
@@ -348,7 +348,7 @@
           {
             opcode: "broadcastToTargetAndWait",
             blockType: Scratch.BlockType.COMMAND,
-            text: Scratch.Translate("broadcast [BROADCAST_OPTION] to [TARGET] and wait"),
+            text: Scratch.translate("broadcast [BROADCAST_OPTION] to [TARGET] and wait"),
             arguments: {
               BROADCAST_OPTION: {
                 type: null,
@@ -366,7 +366,7 @@
           {
             opcode: "broadcastData",
             blockType: Scratch.BlockType.COMMAND,
-            text: Scratch.Translate("broadcast [BROADCAST_OPTION] with data [DATA]"),
+            text: Scratch.translate("broadcast [BROADCAST_OPTION] with data [DATA]"),
             arguments: {
               BROADCAST_OPTION: {
                 type: null,
@@ -380,7 +380,7 @@
           {
             opcode: "broadcastDataAndWait",
             blockType: Scratch.BlockType.COMMAND,
-            text: Scratch.Translate("broadcast [BROADCAST_OPTION] with data [DATA] and wait"),
+            text: Scratch.translate("broadcast [BROADCAST_OPTION] with data [DATA] and wait"),
             arguments: {
               BROADCAST_OPTION: {
                 type: null,
@@ -398,7 +398,7 @@
           {
             opcode: "receivedData",
             blockType: Scratch.BlockType.REPORTER,
-            text: "received data",
+            text: Scratch.translate("received data"),
             disableMonitor: true,
             allowDropAnywhere: true,
           },
@@ -408,7 +408,7 @@
           {
             opcode: "broadcastDataToTarget",
             blockType: Scratch.BlockType.COMMAND,
-            text: Scratch.Translate("broadcast [BROADCAST_OPTION] to [TARGET] with data [DATA]"),
+            text: Scratch.translate("broadcast [BROADCAST_OPTION] to [TARGET] with data [DATA]"),
             func: "broadcastToTarget",
             arguments: {
               BROADCAST_OPTION: {
@@ -427,7 +427,7 @@
           {
             opcode: "broadcastDataToTargetAndWait",
             blockType: Scratch.BlockType.COMMAND,
-            text: Scratch.Translate("broadcast [BROADCAST_OPTION] to [TARGET] with data [DATA] and wait"),
+            text: Scratch.translate("broadcast [BROADCAST_OPTION] to [TARGET] with data [DATA] and wait"),
             func: "broadcastToTargetAndWait",
             arguments: {
               BROADCAST_OPTION: {
@@ -451,14 +451,14 @@
           {
             blockType: Scratch.BlockType.EVENT,
             opcode: "beforeSave",
-            text: Scratch.Translate("before project saves"),
+            text: Scratch.translate("before project saves"),
             shouldRestartExistingThreads: true,
             isEdgeActivated: false,
           },
           {
             blockType: Scratch.BlockType.EVENT,
             opcode: "afterSave",
-            text: Scratch.Translate("after project saves"),
+            text: Scratch.translate("after project saves"),
             shouldRestartExistingThreads: true,
             isEdgeActivated: false,
           },
@@ -476,7 +476,16 @@
           // Attributes have acceptReporters: false
           action: {
             acceptReporters: false,
-            items: ["hit", "released"],
+            items: [
+              {
+                text: Scratch.translate("hit"),
+                value: "hit"
+              },
+              {
+                text: Scratch.translate("released"),
+                value: "released"
+              }
+            ]
           },
           boolean: {
             acceptReporters: false,
@@ -484,7 +493,16 @@
           },
           state: {
             acceptReporters: false,
-            items: ["enabled", "disabled"],
+            items: [
+              {
+                text: Scratch.translate("hit"),
+                value: "hit"
+              },
+              {
+                text: Scratch.translate("released"),
+                value: "released"
+              }
+            ]
           },
         },
       };
