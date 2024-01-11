@@ -3,6 +3,7 @@
 
   const vm = Scratch.vm;
   var workspace;
+  var enabled = false;
 
   vm.on('EXTENSION_ADDED', tryUseScratchBlocks);
   vm.on('BLOCKSINFO_UPDATE', tryUseScratchBlocks);
@@ -24,15 +25,26 @@
 
     ScratchBlocks.Extensions.registerMixin('context_menu', {
       customContextMenu: function(options) {
-        options.splice(4, 4, {
-          text: 'Create New Variable',
+        options.push({
+          text: (enabled) ? 'Disable options' : 'Enable options',
           enabled: true,
-          callback: () => ScratchBlocks.Variables.createVariable()
+          separator: true,
+          callback: () => enabled = !enabled
         });
-        options.splice(5, 5, {
+        options.push({
+          text: 'Create New Variable',
+          enabled: enabled,
+          callback: () => ScratchBlocks.Variables.createVariable(workspace, () => {}, '')
+        });
+        options.push({
           text: 'Create New List',
-          enabled: true,
+          enabled: enabled,
           callback: () => ScratchBlocks.Variables.createVariable(workspace, () => {}, 'list')
+        });
+        options.push({
+          text: 'Create New Broadcast',
+          enabled: enabled,
+          callback: () => ScratchBlocks.Variables.createVariable(workspace, () => {}, 'broadcast_msg')
         });
       }
     })
