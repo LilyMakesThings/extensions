@@ -18,11 +18,11 @@
         blocks: [
           {
             opcode: 'inlineTest',
-            blockType: Scratch.BlockType.OUTPUT,
+            blockType: Scratch.BlockType.BOOLEAN,
             text: ['inline block'],
-            output: 'String',
             outputShape: 3,
-            branchCount: 1
+            branchCount: 1,
+            noConnections: true
           },
           {
             opcode: 'return',
@@ -35,7 +35,7 @@
             },
             isTerminal: true
           }
-        }
+        ]
       }
     }
 
@@ -53,10 +53,14 @@
   runtime._convertBlockForScratchBlocks = function(blockInfo, categoryInfo) {
     const res = cbfsb(blockInfo, categoryInfo);
     if (blockInfo.outputShape) {
-      if (!res.json.outputShape) res.json.outputShape = blockInfo.outputShape;
+      res.json.outputShape = blockInfo.outputShape;
     }
     if (blockInfo.output) {
-      if (!res.json.output) res.json.output = blockInfo.output;
+      res.json.output = blockInfo.output;
+    }
+    if (blockInfo.noConnections) {
+      res.json.previousStatement = undefined;
+      res.json.nextStatement  = undefined;
     }
     return res;
   }
