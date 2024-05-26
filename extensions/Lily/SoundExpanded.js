@@ -252,7 +252,7 @@
           {
             opcode: "changeProjectVolume",
             blockType: Scratch.BlockType.COMMAND,
-            text: "change project volume by [VALUE]",
+            text: "change project volume by [VALUE]%",
             arguments: {
               VALUE: {
                 type: Scratch.ArgumentType.NUMBER,
@@ -529,7 +529,7 @@
     }
 
     setProjectVolume(args) {
-      const value = Scratch.Cast.toNumber(args.VALUE);
+      const value = Scratch.Cast.toNumber(args.VALUE) / 100;
       const newVolume = Scratch.Cast.toNumber(Math.max(Math.min(value, 1), 0));
       runtime.audioEngine.inputNode.gain.value = newVolume;
     }
